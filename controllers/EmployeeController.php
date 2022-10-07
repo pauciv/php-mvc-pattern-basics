@@ -17,7 +17,7 @@ class EmployeeController
         // model = ej: new EmployeeModel
         $employees = $this->model->get(); // get(): returns the array with the DB data
         
-        echo "<hr>", '$employees:', "<br>";
+        echo "<hr>", '$employees: (lo recive del get() de ej: EmployeeModel)', "<br>";
         // echo "<pre>";
         print_r($employees);
         // echo "</pre>";

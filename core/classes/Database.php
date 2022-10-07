@@ -41,7 +41,8 @@ class Database
             $pdo = new PDO($connection, USER, PASSWORD, $options);
             return $pdo;
 
-        } catch (PDOException $e) {
+        } catch (PDOException $e) { // el catch es por si petara
+            echo $e . "<br>";
             require_once(VIEWS . "/error/error.php");
         }
     }

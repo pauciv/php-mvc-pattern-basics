@@ -8,7 +8,7 @@ class EmployeeModel extends Model
     // se ejecuta en el método getAllEmployees() de la clase EmployeeController
     function get() // returns the array with the DB data
     {   
-        // ! prepare & execute son functiones de PDO
+        // ! prepare & execute son métodos de PDO
 
         $query = $this->db->connect()->prepare(
             "SELECT e.id, e.name, e.email, g.name as 'gender', e.city, e.age, e.phone_number
@@ -18,7 +18,7 @@ class EmployeeModel extends Model
         );
 
         try {
-            $query->execute();
+            $query->execute(); // lanza la petición del prepare a la base de datos
             $employees = $query->fetchAll(); // = array de toda la DB
             
             // echo "<br>", '$employees:', "<br>";
